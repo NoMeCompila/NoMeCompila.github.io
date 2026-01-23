@@ -1,295 +1,363 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>QA Portfolio Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#00d4ff", // Electric blue/Neon cyan for accents
-                        "background-light": "#ffffff", 
-                        "background-dark": "#121212", // Deep charcoal/Midnight black
-                        "sidebar-light": "#f8fafc",
-                        "sidebar-dark": "#181818", // Slightly lighter charcoal for sidebar
-                        "card-dark": "#1e1e1e", // Dark card background
-                        "text-light": "#e0e0e0", // Light gray for readability
-                        "text-muted": "#a0a0a0", // Muted text
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "9999px" },
-                },
-            },
-        }
-    </script>
-<style>::-webkit-scrollbar {
-            width: 0px;
-            background: transparent;
-        }
-        .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
-        }
-        .material-symbols-outlined.fill {
-            font-variation-settings: 'FILL' 1;
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-text-light overflow-hidden transition-colors duration-300">
-<div class="flex h-screen w-full">
-<nav class="w-[72px] shrink-0 flex flex-col items-center py-6 gap-6 bg-sidebar-light dark:bg-sidebar-dark border-r border-slate-200 dark:border-white/5 z-20 h-full">
-<a class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary transition hover:bg-primary/20 shadow-sm shadow-primary/20" href="#home">
-<span class="material-symbols-outlined fill">bolt</span>
-</a>
-<div class="flex flex-col gap-3 w-full items-center">
-<button aria-label="Toggle Light Mode" class="flex items-center justify-center w-9 h-9 rounded-xl text-primary hover:text-primary hover:bg-white/5 transition bg-white/5">
-<span class="material-symbols-outlined text-[20px] fill">light_mode</span>
-</button>
-<button aria-label="Switch Language" class="flex items-center justify-center w-9 h-9 rounded-xl text-text-muted hover:text-primary hover:bg-slate-100 dark:hover:bg-white/5 transition text-xs font-bold">
-        ES
-    </button>
-</div>
-<div class="flex flex-col gap-6 mt-2 w-full items-center">
-<a class="group flex flex-col items-center gap-1 w-full relative" href="#about">
-<div class="text-text-muted group-hover:text-primary transition-colors">
-<span class="material-symbols-outlined">person</span>
-</div>
-</a>
-<a class="group flex flex-col items-center gap-1 w-full relative" href="#skills">
-<div class="text-text-muted group-hover:text-primary transition-colors">
-<span class="material-symbols-outlined">code</span>
-</div>
-</a>
-<a class="group flex flex-col items-center gap-1 w-full relative" href="#experience">
-<div class="text-text-muted group-hover:text-primary transition-colors">
-<span class="material-symbols-outlined">work_history</span>
-</div>
-</a>
-<a class="group flex flex-col items-center gap-1 w-full relative" href="#projects">
-<div class="text-text-muted group-hover:text-primary transition-colors">
-<span class="material-symbols-outlined">folder_open</span>
-</div>
-</a>
-<a class="group flex flex-col items-center gap-1 w-full relative" href="#contact">
-<div class="text-text-muted group-hover:text-primary transition-colors">
-<span class="material-symbols-outlined">mail</span>
-</div>
-</a>
-</div>
-<div class="mt-auto">
-<button class="flex items-center justify-center w-10 h-10 rounded-full text-text-muted hover:text-primary hover:bg-slate-100 dark:hover:bg-white/5 transition">
-<span class="material-symbols-outlined">download</span>
-</button>
-</div>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>QA Portfolio - Fernando Caballero</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-text-light overflow-hidden transition-colors duration-300">
+    <div class="flex h-screen w-full">
+<nav class="w-[100px] shrink-0 flex flex-col items-center py-6 gap-1 bg-sidebar-light dark:bg-sidebar-dark border-r border-slate-200 dark:border-white/5 z-20 h-full">
+    
+    <a class="flex flex-col items-center group mb-6" href="#about">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary transition group-hover:bg-primary/20 shadow-sm shadow-primary/20">
+            <span class="material-symbols-outlined fill">person</span>
+        </div>
+        <p class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">Sobre mi</p>
+    </a>
+
+    <a class="flex flex-col items-center group mb-6" href="#skills">
+        <div class="text-text-muted group-hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">code</span>
+        </div>
+        <p class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">Habilidades</p>
+    </a>
+
+    <a class="flex flex-col items-center group mb-6" href="#experience">
+        <div class="text-text-muted group-hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">work_history</span>
+        </div>
+        <p class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">Experiencia</p>
+    </a>
+
+    <a class="flex flex-col items-center group mb-6" href="#projects">
+        <div class="text-text-muted group-hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">rocket_launch</span>
+        </div>
+        <p class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">Proyectos</p>
+    </a>
+
+    <a class="flex flex-col items-center group mb-6" href="#contact">
+        <div class="text-text-muted group-hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">mail</span>
+        </div>
+        <p class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">Contáctame</p>
+    </a>
 </nav>
-<main class="flex-1 h-full overflow-y-auto scroll-smooth bg-background-light dark:bg-background-dark pb-20">
-<section class="px-6 pt-12 pb-8 max-w-2xl mx-auto" id="about">
-<div class="flex flex-col items-start gap-6">
-<div class="relative">
-<div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-slate-50 dark:ring-white/10 shadow-lg shadow-black/50">
-<img alt="Professional headshot of a woman looking confident" class="w-full h-full object-cover" data-alt="Professional headshot of a woman looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWci7iwDkbyY5hO0fuzQXSLr0n033JY7HCK2QjSm3QIESAEn9tknd7mssCLIvKihGyxsVz9hEvgpHgI9QayAC0ZjJNvR7rO-8Dq24EOv3D4fhjGjsIHWx60MsCLwyTtFCjrVmQRdGPql8c8WH2jb2GAlC8A5yoN0X0yBw_o4F5mgSWzv80mWdAKBhI-Sy7wuSSSOSrognTN502NUqmmv44Y2yOYX5IVJ0i8fPLPWKHNlqr4xUXPCy5QGa9D2ExgXUSH6rXKXu16g"/>
-</div>
-<div class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 border-2 border-white dark:border-background-dark rounded-full"></div>
-</div>
-<div class="flex flex-col gap-2">
-<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Jane Doe</h1>
-<p class="text-primary font-medium text-lg tracking-wide">Senior QA Automation Engineer</p>
-</div>
-<p class="text-slate-600 dark:text-text-muted leading-relaxed text-base">
-                        Specializing in building robust test frameworks and CI/CD pipelines. Passionate about quality, automation, and efficiency. I transform manual testing into reliable, automated code.
+        <main class="flex-1 h-full overflow-y-auto scroll-smooth bg-background-light dark:bg-background-dark pb-20">
+            <section class="px-6 pt-12 pb-8 max-w-2xl mx-auto" id="about">
+                <div class="flex flex-col items-start gap-6">
+                    <div class="relative">
+                        <div
+                            class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-slate-50 dark:ring-white/10 shadow-lg shadow-black/50">
+                            <img alt="My Profile pict" class="w-full h-full object-cover" data-alt="My Profile pict"
+                                src="./noBGpp.jpg" />
+                        </div>
+                        <div
+                            class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 border-2 border-white dark:border-background-dark rounded-full">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Fernando Caballero
+                        </h1>
+                        <p class="text-primary font-medium text-lg tracking-wide">QA Automation Engineer | QC Analyst |
+                            Performance Tester</p>
+                    </div>
+                    <p class="text-slate-600 dark:text-text-muted leading-relaxed text-base" style="text-align: justify;">
+                        QA Automation Engineer con 4 años de experiencia y con mentalidad AI-First centrado en asegurar
+                        la calidad durante todo el ciclo de vida de desarrollo de software mediante la implementación de
+                        frameworks de automatización robustos y escalables con cultura de aprendizaje continuo y con
+                        personalidad colaborativa. con experiencia en negocio de Banca y Healthcare.
+
                     </p>
-<div class="flex gap-3 mt-2">
-<button class="flex items-center gap-2 bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold hover:bg-cyan-300 transition shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined text-[18px]">mail</span>
-                            Contact Me
+                    <div class="flex gap-3 mt-2">
+                        <a href="mailto:cabafer1@gmail.com" target="_blank"><button
+                            class="flex items-center gap-2 bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold hover:bg-cyan-300 transition shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-[18px]">mail</span>
+                            Contáctame
                         </button>
-<button class="flex items-center gap-2 bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-text-light px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-200 dark:hover:bg-white/10 transition border border-transparent dark:border-white/10">
-<span class="material-symbols-outlined text-[18px]">description</span>
-                            Resume
+                        </a>
+                        <a href="https://drive.google.com/file/d/1kSHFD1YRk4G3LfIjQ6dLFVW90EqdEvyL/view?usp=drive_link" target="_blank">
+                        <button
+                            class="flex items-center gap-2 bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-text-light px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-200 dark:hover:bg-white/10 transition border border-transparent dark:border-white/10">
+                            <span class="material-symbols-outlined text-[18px]">description</span>
+                            CV | Resume
                         </button>
-</div>
-</div>
-</section>
-<div class="w-full h-px bg-slate-100 dark:bg-white/5 my-2"></div>
-<section class="px-6 py-8 max-w-2xl mx-auto" id="skills">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary">terminal</span>
-<h2 class="text-xl font-bold text-slate-900 dark:text-white">Technical Skills</h2>
-</div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </section>
+            <div class="w-full h-px bg-slate-100 dark:bg-white/5 my-2"></div>
+            <section class="px-6 py-8 max-w-2xl mx-auto" id="skills">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary">code</span>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Technical Skills</h2>
+                </div>
+  <p class="category-title">Api Testing</p>
 <div class="flex flex-wrap gap-2">
-<span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Selenium</span>
-<span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Python</span>
-<span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Java</span>
-<span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Appium</span>
-<span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Jenkins</span>
-<span class="px-4 py-1.5 bg-white dark:bg-transparent text-slate-600 dark:text-text-muted rounded-lg text-sm border border-slate-200 dark:border-white/10 dark:hover:border-primary/50 transition-colors cursor-default">Docker</span>
-<span class="px-4 py-1.5 bg-white dark:bg-transparent text-slate-600 dark:text-text-muted rounded-lg text-sm border border-slate-200 dark:border-white/10 dark:hover:border-primary/50 transition-colors cursor-default">Kubernetes</span>
-<span class="px-4 py-1.5 bg-white dark:bg-transparent text-slate-600 dark:text-text-muted rounded-lg text-sm border border-slate-200 dark:border-white/10 dark:hover:border-primary/50 transition-colors cursor-default">Postman</span>
-<span class="px-4 py-1.5 bg-white dark:bg-transparent text-slate-600 dark:text-text-muted rounded-lg text-sm border border-slate-200 dark:border-white/10 dark:hover:border-primary/50 transition-colors cursor-default">JIRA</span>
-<span class="px-4 py-1.5 bg-white dark:bg-transparent text-slate-600 dark:text-text-muted rounded-lg text-sm border border-slate-200 dark:border-white/10 dark:hover:border-primary/50 transition-colors cursor-default">Git</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Postman</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Karate DSL</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Python | Requests</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Java | Rest-Assured</span>
 </div>
-</section>
-<section class="px-6 py-8 max-w-2xl mx-auto" id="experience">
-<div class="flex items-center gap-3 mb-8">
-<span class="material-symbols-outlined text-primary">history_edu</span>
-<h2 class="text-xl font-bold text-slate-900 dark:text-white">Experience</h2>
+
+<p class="category-title">Web UI Testing</p>
+<div class="flex flex-wrap gap-2">
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Playwright | Typescript</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Selenium | Python</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Selenium | Java</span>
 </div>
-<div class="border-l-2 border-slate-200 dark:border-white/10 ml-3 space-y-10 pb-4">
-<div class="relative pl-8 group">
-<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-primary group-hover:scale-110 transition-transform shadow-[0_0_10px_rgba(0,212,255,0.5)]"></div>
-<div class="flex flex-col gap-1">
-<h3 class="text-base font-bold text-slate-900 dark:text-white">Lead QA Engineer</h3>
-<p class="text-sm font-medium text-slate-500 dark:text-primary/80">TechCorp Inc. • 2020 - Present</p>
-<p class="text-sm text-slate-600 dark:text-text-muted mt-2 leading-relaxed">
-                                Spearheaded the migration from manual testing to a fully automated Python/Selenium framework. Reduced regression testing time by 60% and mentored 4 junior QA engineers.
+
+<p class="category-title">Database Testing</p>
+<div class="flex flex-wrap gap-2">
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">SQL Server</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">SOQL</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">MySQL</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">PostgreSQL</span>
+</div>
+
+<p class="category-title">Performance Testing</p>
+<div class="flex flex-wrap gap-2">
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">JMeter</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">LoadRunner</span>
+</div>
+
+<p class="category-title">Control de Versiones</p>
+<div class="flex flex-wrap gap-2">
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Git</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">GitHub</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">GitLab</span>
+</div>
+
+<p class="category-title">Gestión de Proyectos</p>
+<div class="flex flex-wrap gap-2">
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Jira</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Jira Xray</span>
+</div>
+
+<p class="category-title">AI Tools</p>
+<div class="flex flex-wrap gap-2">
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Chat GPT | Codex</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Gemini | Antigravity</span>
+    <span class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Github Copilot Chat</span>
+</div>
+
+
+            </section>
+            <section class="px-6 py-8 max-w-2xl mx-auto" id="experience">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="material-symbols-outlined text-primary">work_history</span>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Experience</h2>
+                </div>
+                <div class="border-l-2 border-slate-200 dark:border-white/10 ml-3 space-y-10 pb-4">
+                    <div class="relative pl-8 group">
+                        <div
+                            class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-primary group-hover:scale-110 transition-transform shadow-[0_0_10px_rgba(0,212,255,0.5)]">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Lead QA Engineer</h3>
+                            <p class="text-sm font-medium text-slate-500 dark:text-primary/80">TechCorp Inc. • 2020 -
+                                Present</p>
+                            <p class="text-sm text-slate-600 dark:text-text-muted mt-2 leading-relaxed">
+                                Spearheaded the migration from manual testing to a fully automated Python/Selenium
+                                framework. Reduced regression testing time by 60% and mentored 4 junior QA engineers.
                             </p>
-</div>
-</div>
-<div class="relative pl-8 group">
-<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors"></div>
-<div class="flex flex-col gap-1">
-<h3 class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer</h3>
-<p class="text-sm font-medium text-slate-500 dark:text-text-muted">Innovate Solutions • 2017 - 2020</p>
-<p class="text-sm text-slate-600 dark:text-text-muted mt-2 leading-relaxed">
-                                Developed automated scripts for mobile applications using Appium. Integrated tests into Jenkins CI/CD pipelines ensuring nightly builds were bug-free.
+                        </div>
+                    </div>
+                    <div class="relative pl-8 group">
+                        <div
+                            class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer</h3>
+                            <p class="text-sm font-medium text-slate-500 dark:text-text-muted">Innovate Solutions • 2017
+                                - 2020</p>
+                            <p class="text-sm text-slate-600 dark:text-text-muted mt-2 leading-relaxed">
+                                Developed automated scripts for mobile applications using Appium. Integrated tests into
+                                Jenkins CI/CD pipelines ensuring nightly builds were bug-free.
                             </p>
-</div>
-</div>
-<div class="relative pl-8 group">
-<div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors"></div>
-<div class="flex flex-col gap-1">
-<h3 class="text-base font-bold text-slate-900 dark:text-white">Junior QA Tester</h3>
-<p class="text-sm font-medium text-slate-500 dark:text-text-muted">WebFlow Agency • 2015 - 2017</p>
-<p class="text-sm text-slate-600 dark:text-text-muted mt-2 leading-relaxed">
-                                Performed manual functional and UI testing for various e-commerce clients. Documented bug reports in JIRA and verified fixes.
+                        </div>
+                    </div>
+                    <div class="relative pl-8 group">
+                        <div
+                            class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Junior QA Tester</h3>
+                            <p class="text-sm font-medium text-slate-500 dark:text-text-muted">WebFlow Agency • 2015 -
+                                2017</p>
+                            <p class="text-sm text-slate-600 dark:text-text-muted mt-2 leading-relaxed">
+                                Performed manual functional and UI testing for various e-commerce clients. Documented
+                                bug reports in JIRA and verified fixes.
                             </p>
-</div>
-</div>
-</div>
-</section>
-<section class="px-6 py-8 max-w-2xl mx-auto bg-slate-50 dark:bg-white/5 -mx-6 md:mx-auto md:rounded-xl md:border md:border-transparent dark:md:border-white/5" id="projects">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-primary">rocket_launch</span>
-<h2 class="text-xl font-bold text-slate-900 dark:text-white">Featured Projects</h2>
-</div>
-<div class="grid grid-cols-1 gap-4">
-<div class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all flex flex-col h-full hover:border-primary/30">
-<div>
-<div class="flex justify-between items-start">
-<h3 class="font-bold text-slate-900 dark:text-white">E-commerce Auto-Suite</h3>
-<span class="material-symbols-outlined text-slate-400 dark:text-text-muted text-[20px]">open_in_new</span>
-</div>
-<p class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
-                                A comprehensive Python-based regression suite for a high-traffic retail platform. Covers 500+ test cases.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="px-6 py-8 max-w-2xl mx-auto bg-slate-50 dark:bg-white/5 -mx-6 md:mx-auto md:rounded-xl md:border md:border-transparent dark:md:border-white/5"
+                id="projects">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="material-symbols-outlined text-primary">rocket_launch</span>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Featured Projects</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-4">
+                    <div
+                        class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all flex flex-col h-full hover:border-primary/30">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-slate-900 dark:text-white">E-commerce Auto-Suite</h3>
+                                <span
+                                    class="material-symbols-outlined text-slate-400 dark:text-text-muted text-[20px]">open_in_new</span>
+                            </div>
+                            <p class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
+                                A comprehensive Python-based regression suite for a high-traffic retail platform. Covers
+                                500+ test cases.
                             </p>
-<div class="flex gap-2 mb-4">
-<span class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Python</span>
-<span class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Selenium</span>
-</div>
-</div>
-<div class="mt-auto pt-3 border-t border-slate-100 dark:border-white/5">
-<a class="flex items-center justify-center gap-2 w-full py-2 bg-slate-50 dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-text-light rounded-lg text-sm font-medium transition group" href="#">
-<svg aria-hidden="true" class="h-4 w-4 text-slate-500 group-hover:text-slate-800 dark:text-text-muted dark:group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
-<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
-</svg>
-        View on GitHub
-    </a>
-</div>
-</div>
-<div class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all flex flex-col h-full hover:border-primary/30">
-<div>
-<div class="flex justify-between items-start">
-<h3 class="font-bold text-slate-900 dark:text-white">Mobile Perf Monitor</h3>
-<span class="material-symbols-outlined text-slate-400 dark:text-text-muted text-[20px]">open_in_new</span>
-</div>
-<p class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
-                                Automated performance monitoring tool for iOS apps using Appium and Grafana for visualization.
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Python</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Selenium</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-slate-100 dark:border-white/5">
+                            <a class="flex items-center justify-center gap-2 w-full py-2 bg-slate-50 dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-text-light rounded-lg text-sm font-medium transition group"
+                                href="#">
+                                <svg aria-hidden="true"
+                                    class="h-4 w-4 text-slate-500 group-hover:text-slate-800 dark:text-text-muted dark:group-hover:text-primary transition-colors"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path clip-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all flex flex-col h-full hover:border-primary/30">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-bold text-slate-900 dark:text-white">Mobile Perf Monitor</h3>
+                                <span
+                                    class="material-symbols-outlined text-slate-400 dark:text-text-muted text-[20px]">open_in_new</span>
+                            </div>
+                            <p class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
+                                Automated performance monitoring tool for iOS apps using Appium and Grafana for
+                                visualization.
                             </p>
-<div class="flex gap-2 mb-4">
-<span class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Appium</span>
-<span class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Grafana</span>
-</div>
-</div>
-<div class="mt-auto pt-3 border-t border-slate-100 dark:border-white/5">
-<a class="flex items-center justify-center gap-2 w-full py-2 bg-slate-50 dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-text-light rounded-lg text-sm font-medium transition group" href="#">
-<svg aria-hidden="true" class="h-4 w-4 text-slate-500 group-hover:text-slate-800 dark:text-text-muted dark:group-hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24">
-<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
-</svg>
-        View on GitHub
-    </a>
-</div>
-</div>
-</div>
-</section>
-<section class="px-6 py-10 max-w-2xl mx-auto text-center" id="github-more">
-<div class="flex flex-col items-center justify-center p-8 border border-slate-200 dark:border-white/10 rounded-2xl bg-white dark:bg-card-dark shadow-sm">
-<div class="p-3 bg-slate-100 dark:bg-white/5 rounded-full text-slate-900 dark:text-white mb-4">
-<svg aria-hidden="true" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">More on GitHub</h2>
-<p class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
-            Dive into my full repository history including forks, contributions, and experimental projects.
-        </p>
-<a class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-primary dark:hover:bg-cyan-300 text-white dark:text-black px-6 py-3 rounded-full text-sm font-bold transition shadow-lg shadow-slate-200 dark:shadow-primary/25 w-full sm:w-auto" href="#">
-            View Full Profile
-        </a>
-</div>
-</section>
-<section class="px-6 py-12 max-w-2xl mx-auto" id="contact">
-<div class="bg-primary/5 dark:bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center border border-transparent dark:border-white/10">
-<h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Let's work together</h2>
-<p class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
-                        Currently open for new opportunities in QA Automation leadership roles.
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Appium</span>
+                                <span
+                                    class="text-xs font-medium px-2 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-primary rounded border border-transparent dark:border-primary/20">Grafana</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-3 border-t border-slate-100 dark:border-white/5">
+                            <a class="flex items-center justify-center gap-2 w-full py-2 bg-slate-50 dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-text-light rounded-lg text-sm font-medium transition group"
+                                href="#">
+                                <svg aria-hidden="true"
+                                    class="h-4 w-4 text-slate-500 group-hover:text-slate-800 dark:text-text-muted dark:group-hover:text-primary transition-colors"
+                                    fill="currentColor" viewBox="0 0 24 24">
+                                    <path clip-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="px-6 py-10 max-w-2xl mx-auto text-center" id="github-more">
+                <div
+                    class="flex flex-col items-center justify-center p-8 border border-slate-200 dark:border-white/10 rounded-2xl bg-white dark:bg-card-dark shadow-sm">
+                    <div class="p-3 bg-slate-100 dark:bg-white/5 rounded-full text-slate-900 dark:text-white mb-4">
+                        <svg aria-hidden="true" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path clip-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">More on GitHub</h2>
+                    <p class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
+                        Dive into my full repository history including forks, contributions, and experimental projects.
                     </p>
-<a class="flex items-center gap-2 text-primary font-bold hover:underline" href="mailto:jane.doe@example.com">
-                        jane.doe@example.com
+                    <a class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-primary dark:hover:bg-cyan-300 text-white dark:text-black px-6 py-3 rounded-full text-sm font-bold transition shadow-lg shadow-slate-200 dark:shadow-primary/25 w-full sm:w-auto"
+                        href="#">
+                        View Full Profile
+                    </a>
+                </div>
+            </section>
+            <section class="px-6 py-12 max-w-2xl mx-auto" id="contact">
+                <div
+                    class="bg-primary/5 dark:bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center border border-transparent dark:border-white/10">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Contáctame</h2>
+                    <p class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
+                        Actualmente estoy abierto a nuevas oportunidades laborales incluso como freelance para un proyecto particular ya sea como QA Automation, 
+                        QA Funcional o Performance Tseter. Si deseas contactarme, no dudes en hacerlo.
+                    </p>
+                    <a class="flex items-center gap-2 text-primary font-bold hover:underline"
+                        href="mailto:cabafer1@gmail.com">
+                        cabafer1@gmail.com
                         <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</a>
-<div class="flex gap-6 mt-8">
-<a class="text-slate-400 hover:text-slate-900 dark:text-text-muted dark:hover:text-primary transition" href="#">
-<span class="sr-only">LinkedIn</span>
-<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-<path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path>
-</svg>
-</a>
-<a class="text-slate-400 hover:text-slate-900 dark:text-text-muted dark:hover:text-primary transition" href="#">
-<span class="sr-only">GitHub</span>
-<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
-</svg>
-</a>
-</div>
-</div>
-</section>
-</main>
-</div>
-</body></html>
+                    </a>
+                    <div class="flex gap-6 mt-8">
+                        <a class="text-slate-400 hover:text-slate-900 dark:text-text-muted dark:hover:text-primary transition"
+                            href="https://www.linkedin.com/in/qa-fer-caballero/" target="_blank">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-slate-400 hover:text-slate-900 dark:text-text-muted dark:hover:text-primary transition"
+                            href="https://github.com/NoMeCompila" target="_blank">
+                            <span class="sr-only">GitHub</span>
+                            <svg aria-hidden="true" class="h-7 w-7" fill="currentColor" viewBox="2 2 23 23">
+                                <path clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+<footer class="px-6 py-12 max-w-2xl mx-auto border-t border-slate-100 dark:border-white/5 mt-10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-left">
+            <p class="text-sm font-bold text-slate-900 dark:text-white">Fernando Caballero © 2026</p>
+            <p class="text-xs text-text-muted">Especialista en QA Automation & Python Scripting</p>
+        </div>
+        <div class="flex gap-4">
+            <p class="text-[10px] text-text-muted uppercase tracking-widest font-medium">Powered By Google AI Studio</p>
+        </div>
+    </div>
+    <div class="h-20"></div>
+</footer>
+
+        </main>
+    </div>
+</body>
+
+</html>
