@@ -14,6 +14,9 @@
 
 body {
     min-height: max(884px, 100dvh);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 html {
