@@ -21,7 +21,7 @@
 
 <body
     class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-text-light overflow-hidden transition-colors duration-300">
-    <div class="flex h-screen w-full">
+    <div class="flex h-screen w-full overflow-hidden">
         <nav
             class="w-[100px] shrink-0 flex flex-col items-center py-6 gap-1 bg-sidebar-light dark:bg-sidebar-dark border-r border-slate-200 dark:border-white/5 z-20 h-full">
 
@@ -59,7 +59,8 @@
                 </div>
                 <p
                     class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">
-                    Proyectos</p>
+                    Proyectos
+                </p>
             </a>
 
             <a class="flex flex-col items-center group mb-6" href="#contact">
@@ -68,10 +69,11 @@
                 </div>
                 <p
                     class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">
-                    Contáctame</p>
+                    Contáctame
+                </p>
             </a>
         </nav>
-        <main class="flex-1 h-full overflow-y-auto scroll-smooth bg-background-light dark:bg-background-dark pb-20">
+        <main class="flex-1 h-full overflow-y-auto scroll-smooth flex flex-col">
             <section class="px-6 pt-12 pb-8 max-w-2xl mx-auto" id="about">
                 <div class="flex flex-col items-start gap-6">
                     <div class="relative">
@@ -537,7 +539,8 @@
                             </div>
                         </div>
                         <div class="mt-auto pt-3 border-t border-slate-100 dark:border-white/5">
-                            <a class="flex items-center justify-center gap-2 w-full py-2 bg-slate-50 dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-text-light rounded-lg text-sm font-medium transition group"
+                            <a id="contact"
+                                class="flex items-center justify-center gap-2 w-full py-2 bg-slate-50 dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 text-slate-700 dark:text-text-light rounded-lg text-sm font-medium transition group"
                                 href="https://github.com/NoMeCompila/SystemInfo-py" target="_blank">
                                 <svg aria-hidden="true"
                                     class="h-4 w-4 text-slate-500 group-hover:text-slate-800 dark:text-text-muted dark:group-hover:text-primary transition-colors"
@@ -574,7 +577,7 @@
                     </a>
                 </div>
             </section>
-            <section class="px-6 py-12 max-w-2xl mx-auto" id="contact">
+            <section class="px-6 py-12 max-w-2xl mx-auto">
                 <div
                     class="bg-primary/5 dark:bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center border border-transparent dark:border-white/10">
                     <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Contáctame</h2>
@@ -610,21 +613,33 @@
                     </div>
                 </div>
             </section>
+<footer class="w-full bg-slate-50 dark:bg-[#181818] border-t border-slate-200 dark:border-white/5 mt-auto transition-colors duration-300">
+    <div class="px-6 py-10 max-w-2xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">
+                    Fernando Caballero © 2026
+                </p>
+                <p class="text-xs text-slate-500 dark:text-text-muted mt-1">
+                    Especialista en QA Automation & Python Scripting
+                </p>
+            </div>
+            
+            <div class="flex items-center gap-2 px-3 py-1.5 bg-white/50 dark:bg-white/5 rounded-full border border-slate-200 dark:border-white/10">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                <p class="text-[10px] text-slate-600 dark:text-text-muted uppercase tracking-wider font-semibold">
+                    From 🇦🇷 Corrientes to the world 🌎
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
 
-            <footer class="px-6 py-12 max-w-2xl mx-auto border-t border-slate-100 dark:border-white/5 mt-10">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div class="text-left">
-                        <p class="text-sm font-bold text-slate-900 dark:text-white">Fernando Caballero © 2026</p>
-                        <p class="text-xs text-text-muted">Especialista en QA Automation & Python Scripting</p>
-                    </div>
-                    <div class="flex gap-4">
-                        <p class="text-[10px] text-text-muted uppercase tracking-widest font-medium">From 🇦🇷 -
-                            Corrientes to the world 🌎</p>
-                    </div>
-                </div>
-                <div class="h-20"></div>
-            </footer>
-        </main>
+    </main>
     </div>
 </body>
 
