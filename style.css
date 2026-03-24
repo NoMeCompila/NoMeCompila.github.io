@@ -27,13 +27,16 @@ html {
 section {
     scroll-margin-top: 2rem;
 }
+
 /* style.css */
 
 .category-title {
     /* Márgenes arriba y abajo */
-    margin-top: 1.5rem;    /* mt-6 */
-    margin-bottom: 0.75rem; /* mb-3 */
-    
+    margin-top: 1.5rem;
+    /* mt-6 */
+    margin-bottom: 0.75rem;
+    /* mb-3 */
+
     /* Estilo de botón */
     display: inline-flex;
     padding: 0.25rem 0.75rem;
@@ -41,14 +44,12 @@ section {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    
-    /* Colores modo claro/oscuro */
-    color: #00d4ff; /* primary */
-    background-color: rgba(0, 212, 255, 0.1); /* primary/10 */
-    border-radius: 9999px; /* rounded-full */
-}
 
-/* Ajuste para que el primer título no tenga tanto margen arriba 
-section #skills p:first-of-type {
-    margin-top: 0.5rem;
-}*/
+    /* Colores modo claro/oscuro */
+    color: #00d4ff;
+    /* primary */
+    background-color: rgba(0, 212, 255, 0.1);
+    /* primary/10 */
+    border-radius: 9999px;
+    /* rounded-full */
+}
