@@ -17,6 +17,7 @@
 
     <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="lang.js"></script>
 </head>
 
 <body
@@ -30,36 +31,36 @@
                     class="flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 text-primary transition group-hover:bg-primary/20 shadow-sm shadow-primary/20">
                     <span class="material-symbols-outlined fill">person</span>
                 </div>
-                <p
+                <p data-i18n="nav_about"
                     class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">
-                    Sobre mi</p>
+                    About me</p>
             </a>
 
             <a class="flex flex-col items-center group mb-6" href="#skills">
                 <div class="text-text-muted group-hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">code</span>
                 </div>
-                <p
+                <p data-i18n="nav_skills"
                     class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">
-                    Habilidades</p>
+                    Skills</p>
             </a>
 
             <a class="flex flex-col items-center group mb-6" href="#experience">
                 <div class="text-text-muted group-hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">work_history</span>
                 </div>
-                <p
+                <p data-i18n="nav_experience"
                     class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">
-                    Experiencia</p>
+                    Experience</p>
             </a>
 
             <a class="flex flex-col items-center group mb-6" href="#projects">
                 <div class="text-text-muted group-hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">rocket_launch</span>
                 </div>
-                <p
+                <p data-i18n="nav_projects"
                     class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">
-                    Proyectos
+                    Projects
                 </p>
             </a>
 
@@ -67,11 +68,17 @@
                 <div class="text-text-muted group-hover:text-primary transition-colors">
                     <span class="material-symbols-outlined">mail</span>
                 </div>
-                <p
+                <p data-i18n="nav_contact"
                     class="text-[10px] uppercase font-bold mt-1 text-text-muted group-hover:text-primary transition-colors">
-                    Contáctame
+                    Contact me
                 </p>
             </a>
+
+            <div class="mt-auto flex flex-col items-center justify-center gap-2 mb-4">
+                <button id="btn-lang-en" class="w-8 h-8 rounded-full bg-primary text-black font-bold text-[10px] flex items-center justify-center shadow-sm transition-all hover:scale-110">EN</button>
+                <div class="w-4 h-[1px] bg-slate-200 dark:bg-white/10"></div>
+                <button id="btn-lang-es" class="w-8 h-8 rounded-full text-text-muted font-bold text-[10px] flex items-center justify-center transition-all hover:text-primary hover:scale-110">ES</button>
+            </div>
         </nav>
         <main class="flex-1 h-full overflow-y-auto scroll-smooth flex flex-col">
             <section class="px-6 pt-12 pb-8 max-w-2xl mx-auto" id="about">
@@ -89,22 +96,17 @@
                     <div class="flex flex-col gap-2">
                         <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Fernando Caballero
                         </h1>
-                        <p class="text-primary font-medium text-lg tracking-wide">QA Automation Engineer | QC Analyst |
-                            Performance Tester</p>
+                        <p data-i18n="about_role" class="text-primary font-medium text-lg tracking-wide">QA Automation Engineer | QC Analyst | Performance Tester</p>
                     </div>
-                    <p class="text-slate-600 dark:text-text-muted leading-relaxed text-base"
+                    <p data-i18n="about_desc" class="text-slate-600 dark:text-text-muted leading-relaxed text-base"
                         style="text-align: justify;">
-                        QA Automation Engineer con 4 años de experiencia y con mentalidad AI-First centrado en asegurar
-                        la calidad durante todo el ciclo de vida de desarrollo de software mediante la implementación de
-                        frameworks de automatización robustos y escalables con cultura de aprendizaje continuo y con
-                        personalidad colaborativa. con experiencia en negocio de Banca y Healthcare.
-
+                        QA Automation Engineer with 4 years of experience and an AI-First mindset focused on ensuring quality throughout the software development lifecycle by implementing robust and scalable automation frameworks. Cultivating a continuous learning culture with a collaborative personality. Experienced in Banking and Healthcare domains.
                     </p>
                     <div class="flex gap-3 mt-2">
                         <a href="mailto:cabafer1@gmail.com" target="_blank"><button
                                 class="flex items-center gap-2 bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold hover:bg-cyan-300 transition shadow-lg shadow-primary/20">
                                 <span class="material-symbols-outlined text-[18px]">mail</span>
-                                Contáctame
+                                <span data-i18n="btn_contact">Contact me</span>
                             </button>
                         </a>
                         <a href="https://drive.google.com/file/d/1kSHFD1YRk4G3LfIjQ6dLFVW90EqdEvyL/view?usp=drive_link"
@@ -112,7 +114,7 @@
                             <button
                                 class="flex items-center gap-2 bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-text-light px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-200 dark:hover:bg-white/10 transition border border-transparent dark:border-white/10">
                                 <span class="material-symbols-outlined text-[18px]">description</span>
-                                CV | Resume
+                                <span data-i18n="btn_cv">CV | Resume</span>
                             </button>
                         </a>
 
@@ -123,9 +125,9 @@
             <section class="px-6 py-8 max-w-2xl mx-auto" id="skills">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="material-symbols-outlined text-primary">code</span>
-                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Technical Skills</h2>
+                    <h2 data-i18n="skills_title" class="text-xl font-bold text-slate-900 dark:text-white">Technical Skills</h2>
                 </div>
-                <p class="category-title">Api Testing</p>
+                <p data-i18n="skills_api" class="category-title">Api Testing</p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Postman</span>
@@ -140,7 +142,7 @@
                         | Rest-Assured</span>
                 </div>
 
-                <p class="category-title">Web UI Testing</p>
+                <p data-i18n="skills_webui" class="category-title">Web UI Testing</p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Playwright
@@ -153,7 +155,7 @@
                         | Java</span>
                 </div>
 
-                <p class="category-title">Database Testing</p>
+                <p data-i18n="skills_db" class="category-title">Database Testing</p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">SQL
@@ -166,7 +168,7 @@
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">PostgreSQL</span>
                 </div>
 
-                <p class="category-title">Performance Testing</p>
+                <p data-i18n="skills_perf" class="category-title">Performance Testing</p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">JMeter</span>
@@ -174,7 +176,7 @@
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">LoadRunner</span>
                 </div>
 
-                <p class="category-title">Control de Versiones</p>
+                <p data-i18n="skills_vcs" class="category-title">Version Control</p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Git</span>
@@ -184,7 +186,7 @@
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">GitLab</span>
                 </div>
 
-                <p class="category-title">Gestión de Proyectos</p>
+                <p data-i18n="skills_pm" class="category-title">Project Management</p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Jira</span>
@@ -193,7 +195,7 @@
                         Xray</span>
                 </div>
 
-                <p class="category-title">AI Tools</p>
+                <p data-i18n="skills_ai" class="category-title">AI Tools</p>
                 <div class="flex flex-wrap gap-2">
                     <span
                         class="px-4 py-1.5 bg-slate-100 dark:bg-white/5 text-slate-800 dark:text-text-light rounded-lg text-sm font-medium border border-slate-200 dark:border-white/10">Chat
@@ -211,7 +213,7 @@
             <section class="px-6 py-8 max-w-2xl mx-auto" id="experience">
                 <div class="flex items-center gap-3 mb-8">
                     <span class="material-symbols-outlined text-primary">work_history</span>
-                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Experience</h2>
+                    <h2 data-i18n="exp_title" class="text-xl font-bold text-slate-900 dark:text-white">Experience</h2>
                 </div>
                 <div class="border-l-2 border-slate-200 dark:border-white/10 ml-3 space-y-10 pb-4">
                     <div class="relative pl-8 group">
@@ -219,70 +221,45 @@
                             class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-primary group-hover:scale-110 transition-transform shadow-[0_0_10px_rgba(0,212,255,0.5)]">
                         </div>
                         <div class="flex flex-col gap-1">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">QA Automation | QA functional
-                                Analyst</h3>
-                            <p class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • Johnson &
-                                Johnson | Full Time • Full Remote | Oct 2025 - Actualidad</p>
+                            <h3 data-i18n="exp1_role" class="text-base font-bold text-slate-900 dark:text-white">QA Automation | QA functional Analyst</h3>
+                            <p data-i18n="exp1_date" class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • Johnson & Johnson | Full Time • Full Remote | Oct 2025 - Present</p>
                             <div>
-                                <p>
-                                    <strong> Logro principal: </strong> Incorporación a un equipo 100% de habla inglesa
-                                    donde aseguro los procesos de calidad en
-                                    la migración del sistema de administración de dispositivos cardiovasculares en
-                                    múltiples plataformas y dispositivos.
+                                <p data-i18n="exp1_highlight">
+                                    <strong>Main achievement:</strong> Joined a 100% English-speaking team where I ensure quality processes in the migration of the cardiovascular device management system across multiple platforms and devices.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Aseguré el control de calidad funcional durante la migración crítica de Salesforce
-                                    Classic a
-                                    Lightning Web Components (LWC), garantizando la paridad de funciones y la integridad
-                                    de
-                                    los datos.
+                                <p data-i18n="exp1_p1">
+                                    ● Ensured functional quality control during the critical migration from Salesforce Classic to Lightning Web Components (LWC), guaranteeing feature parity and data integrity.
                                 </p>
 
                                 <br>
 
-                                <p>
-                                    ● Redacté casos de prueba enfocados en entorno healthcare siguiendo normas y
-                                    estándares de
-                                    la industria.
+                                <p data-i18n="exp1_p2">
+                                    ● Wrote test cases focused on the healthcare environment following industry norms and standards.
                                 </p>
 
                                 <br>
 
-                                <p>
-                                    ● Validé la adaptabilidad y el rendimiento de la interfaz en dispositivos móviles y
-                                    tablets iOS,
-                                    asegurando una experiencia de usuario consistente para el personal de salud en
-                                    entornos
-                                    clínicos con acceso a distintos tipos de dispositivos a la vez.
+                                <p data-i18n="exp1_p3">
+                                    ● Validated UI adaptability and performance on iOS mobile devices and tablets, ensuring a consistent user experience for healthcare personnel in clinical settings with access to different types of devices simultaneously.
                                 </p>
 
                                 <br>
 
-                                <p>
-                                    ● Diseñé y ejecuté planes de prueba integrales para el sistema de gestión de quejas
-                                    para
-                                    implantes cardiovasculares, asegurando el cumplimiento normativo de la FDA de los
-                                    EEUU
-                                    para la trazabilidad y la vinculación precisa de datos sensibles de pacientes.
+                                <p data-i18n="exp1_p4">
+                                    ● Designed and executed comprehensive test plans for the complaint management system for cardiovascular implants, ensuring US FDA regulatory compliance for traceability and accurate linking of sensitive patient data.
                                 </p>
 
                                 <br>
 
-                                <p>
-                                    ● Optimicé el ciclo de vida de los defectos mediante reportes detallados y análisis
-                                    de causa
-                                    raíz, colaborando con el equipo de desarrollo para reducir los tiempos de resolución
-                                    de bugs.
+                                <p data-i18n="exp1_p5">
+                                    ● Optimized the defect lifecycle through detailed reporting and root cause analysis, collaborating with the development team to reduce bug resolution times.
                                 </p>
 
                                 <br>
 
-                                <p>
-                                    ● Planifiqué la transición de pruebas manuales a automatizadas, identificando flujos
-                                    críticos y
-                                    definiendo criterios de aceptación para el futuro desarrollo de scripts de
-                                    automatización.
+                                <p data-i18n="exp1_p6">
+                                    ● Planned the transition from manual to automated testing, identifying critical flows and defining acceptance criteria for future automation script development.
                                 </p>
 
                             </div>
@@ -293,44 +270,27 @@
                             class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors">
                         </div>
                         <div class="flex flex-col gap-1">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer | SDET
-                                | Performance Tester</h3>
-                            <p class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • Prisma Payway |
-                                Full Time • Full Remote | Nov 2024 - Oct 2025</p>
+                            <h3 data-i18n="exp2_role" class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer | SDET | Performance Tester</h3>
+                            <p data-i18n="exp2_date" class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • Prisma Payway | Full Time • Full Remote | Nov 2024 - Oct 2025</p>
                             <div>
-                                <p>
-                                    <strong>Logro Principal:</strong>Automatización E2E del backend del sistema de
-                                    onboarding a medios de pagos
-                                    electrónicos para nuevos clientes y refactorización del proceso de pruebas de
-                                    performance.
+                                <p data-i18n="exp2_highlight">
+                                    <strong>Main achievement:</strong> E2E Backend automation of the electronic payment means onboarding system for new clients and refactoring of the performance testing process.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Llevé a cabo la implementación de Karate Framework para la migración estratégica
-                                    de
-                                    pruebas de APIs desde Postman, estandarizando la automatización del flujo de
-                                    onboarding de
-                                    clientes y la configuración de infraestructura de pagos electrónicos.
+                                <p data-i18n="exp2_p1">
+                                    ● Led the implementation of Karate Framework for the strategic migration of API testing from Postman, standardizing the automation of the client onboarding flow and electronic payment infrastructure configuration.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Rediseñé integralmente la infraestructura de pruebas de carga con JMeter,
-                                    automatizando su
-                                    ejecución con scripts en Python en entornos EC2 de AWS.
+                                <p data-i18n="exp2_p2">
+                                    ● Comprehensively redesigned the load testing infrastructure with JMeter, automating its execution with Python scripts in AWS EC2 environments.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Refactoricé el backend Java Spring Boot del sistema de emulación de pagos para
-                                    simular
-                                    comportamiento real aleatorio durante las ejecuciones de performance.
+                                <p data-i18n="exp2_p3">
+                                    ● Refactored the Java Spring Boot backend of the payment emulation system to simulate real random behavior during performance executions.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Diseñé un agente de Inteligencia Artificial especializado en transformar historias
-                                    de usuario
-                                    en lenguaje natural a casos de prueba ejecutables en Karate junto con documentación
-                                    para
-                                    Jira Xray, acelerando la cobertura y documentación de pruebas.
+                                <p data-i18n="exp2_p4">
+                                    ● Designed an Artificial Intelligence agent specialized in transforming natural language user stories into executable test cases in Karate along with Jira Xray documentation, accelerating test coverage and documentation.
                                 </p>
                             </div>
                         </div>
@@ -342,48 +302,35 @@
                             class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors">
                         </div>
                         <div class="flex flex-col gap-1">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer | QA
-                                Functional | Performance Tester | Security Tester</h3>
-                            <p class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • Banco de
-                                Crédito del Perú (BCP) | Full Time • Full Remote | Feb 2023 - Oct 2024</p>
+                            <h3 data-i18n="exp3_role" class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer | QA Functional | Performance Tester | Security Tester</h3>
+                            <p data-i18n="exp3_date" class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • Banco de Crédito del Perú (BCP) | Full Time • Full Remote | Feb 2023 - Oct 2024</p>
                             <div>
-                                <p>
-                                    <strong>Logro Principal:</strong>Aseguré la calidad funcional y no funcional del
-                                    sistema de venta de créditos del
-                                    banco aprendiendo e implementando nuevas tecnologías y herramientas en todo el
-                                    proceso.
+                                <p data-i18n="exp3_highlight">
+                                    <strong>Main achievement:</strong> Ensured the functional and non-functional quality of the bank's credit sales system by learning and implementing new technologies and tools throughout the process.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Desarrollé un framework de automatización de pruebas E2E para salesforce en Java
-                                    Selenium para el sistema de ventas de créditos.
+                                <p data-i18n="exp3_p1">
+                                    ● Developed an E2E test automation framework for Salesforce using Java Selenium for the credit sales system.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Desarrollé un framework de automatización backend utilizando Karate Framework
-                                    incrementando la cobertura de pruebas en servicios financieros facilitando la
-                                    detección
-                                    temprana de defectos.
+                                <p data-i18n="exp3_p2">
+                                    ● Developed a backend automation framework using Karate Framework increasing test coverage in financial services, facilitating early defect detection.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Redacté casos de pruebas manuales tanto para las apis como para la interfaz UI en
-                                    formato
-                                    BDD en Jira Xray para su ejecución manual y posterior automatización.
+                                <p data-i18n="exp3_p3">
+                                    ● Wrote manual test cases for both APIs and UI in BDD format in Jira Xray for manual execution and subsequent automation.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Diseñé y Ejecuté pruebas no funcionales de rendimiento con JMeter en entornos en
-                                    la nube
-                                    bajo estrés.
+                                <p data-i18n="exp3_p4">
+                                    ● Designed and executed non-functional performance tests using JMeter in cloud environments under stress.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Migré las pruebas de rendimiento de Jmeter a LoadRunner.
+                                <p data-i18n="exp3_p5">
+                                    ● Migrated performance tests from JMeter to LoadRunner.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Ejecuté pruebas automatizadas de pen-testing con la herramienta OWASP ZAP
+                                <p data-i18n="exp3_p6">
+                                    ● Executed automated pen-testing tests using OWASP ZAP tool.
                                 </p>
                             </div>
                         </div>
@@ -393,37 +340,23 @@
                             class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors">
                         </div>
                         <div class="flex flex-col gap-1">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer | Test
-                                Automation Engineer</h3>
-                            <p class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • The Walt Disney
-                                Company | Full Time • Full Remote | Mar 2022 - Dic 2022</p>
+                            <h3 data-i18n="exp4_role" class="text-base font-bold text-slate-900 dark:text-white">QA Automation Engineer | Test Automation Engineer</h3>
+                            <p data-i18n="exp4_date" class="text-sm font-medium text-slate-500 dark:text-primary/80">Globant • The Walt Disney Company | Full Time • Full Remote | Mar 2022 - Dec 2022</p>
                             <div>
-                                <p>
-                                    <strong>Logro Principal:</strong> Incorporé los conocimientos y habilidades para
-                                    probar software de manera manual
-                                    y automatizada especializándome en la automatización de pruebas.
+                                <p data-i18n="exp4_highlight">
+                                    <strong>Main achievement:</strong> Incorporated knowledge and skills to test software both manually and automatically, specializing in test automation.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Diseñé y desarrollé scripts de automatización para la validación de APIs de
-                                    gestión de datos
-                                    publicitarios utilizando Python como tecnología principal, asegurando la integridad
-                                    de flujos
-                                    de datos críticos.
+                                <p data-i18n="exp4_p1">
+                                    ● Designed and developed automation scripts for validating advertising data management APIs using Python as the main technology, ensuring the integrity of critical data flows.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Ejecuté ciclos de pruebas integrales en un entorno bajo metodología Scrum,
-                                    colaborando
-                                    estrechamente con equipos multidisciplinarios para cumplir con los plazos de entrega
-                                    del cliente.
+                                <p data-i18n="exp4_p2">
+                                    ● Executed end-to-end testing cycles in a Scrum methodology environment, collaborating closely with cross-functional teams to meet client delivery deadlines.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Identifiqué y reporté inconsistencias en servicios de backend, mejorando la
-                                    calidad del
-                                    software antes de su paso a producción y facilitando la resolución de bugs
-                                    complejos.
+                                <p data-i18n="exp4_p3">
+                                    ● Identified and reported inconsistencies in backend services, improving software quality before its release to production and facilitating complex bug resolution.
                                 </p>
                             </div>
                         </div>
@@ -433,34 +366,23 @@
                             class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-background-dark border-4 border-slate-300 dark:border-white/20 group-hover:border-primary transition-colors">
                         </div>
                         <div class="flex flex-col gap-1">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Backend Developer | DBA |
-                                Scripter</h3>
-                            <p class="text-sm font-medium text-slate-500 dark:text-primary/80">JUFEC S.A.| Partial Time
-                                • On Site | Abril 2021 - Sep 2021</p>
+                            <h3 data-i18n="exp5_role" class="text-base font-bold text-slate-900 dark:text-white">Backend Developer | DBA | Scripter</h3>
+                            <p data-i18n="exp5_date" class="text-sm font-medium text-slate-500 dark:text-primary/80">JUFEC S.A.| Part Time • On Site | April 2021 - Sep 2021</p>
                             <div>
-                                <p>
-                                    <strong>Logro Principal:</strong> Logré incorporarme al mercado laboral IT y poner
-                                    en práctica lo aprendido en la
-                                    carrera universitaria.
+                                <p data-i18n="exp5_highlight">
+                                    <strong>Main achievement:</strong> Successfully entered the IT job market, applying the knowledge acquired during my university degree.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Diseñé y desarrollé la arquitectura backend de un sistema web interno para el
-                                    monitoreo y
-                                    consulta de terminales farmacéuticas, centralizando la gestión operativa de la
-                                    empresa.
+                                <p data-i18n="exp5_p1">
+                                    ● Designed and developed the backend architecture of an internal web system for monitoring and querying pharmaceutical terminals, centralizing the company's operational management.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Modelé bases de datos relacionales y creé scripts de recolección automática de
-                                    datos,
-                                    permitiendo el análisis de métricas de hardware y software en tiempo real.
+                                <p data-i18n="exp5_p2">
+                                    ● Modeled relational databases and created automated data collection scripts, allowing real-time analysis of hardware and software metrics.
                                 </p>
                                 <br>
-                                <p>
-                                    ● Automaticé procesos de extracción de datos de terminales remotas, reduciendo el
-                                    tiempo de
-                                    respuesta del equipo técnico ante incidentes de infraestructura.
+                                <p data-i18n="exp5_p3">
+                                    ● Automated data extraction processes from remote terminals, reducing the technical team's response time to infrastructure incidents.
                                 </p>
                             </div>
                         </div>
@@ -472,24 +394,20 @@
                 id="projects">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="material-symbols-outlined text-primary">rocket_launch</span>
-                    <h2 class="text-xl font-bold text-slate-900 dark:text-white">Proyectos</h2>
+                    <h2 data-i18n="proj_title" class="text-xl font-bold text-slate-900 dark:text-white">Projects</h2>
                 </div>
                 <div class="grid grid-cols-1 gap-4">
                     <div
                         class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all flex flex-col h-full hover:border-primary/30">
                         <div>
                             <div class="flex justify-between items-start">
-                                <h3 class="font-bold text-slate-900 dark:text-white">E-commerce Full Test Automation
+                                <h3 data-i18n="proj1_title" class="font-bold text-slate-900 dark:text-white">E-commerce Full Test Automation
                                 </h3>
                                 <span
                                     class="material-symbols-outlined text-slate-400 dark:text-text-muted text-[20px]">open_in_new</span>
                             </div>
-                            <p class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
-                                Proyecto de automatización de pruebas end-to-end para una plataforma de comercio
-                                electrónico, donde puse a prueba mis habilidades de adopción de nuevas tecnologías.
-                                de lo último en tecnología de automatización de frontend con typescript y playwright. En
-                                el mismo se puede encontrar: Reportes automatizads, Page Object Model, Utilizaciónc de
-                                IA, Documentación de casos de prueba.
+                            <p data-i18n="proj1_desc" class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
+                                End-to-end test automation project for an e-commerce platform, where I tested my skills in adopting new technologies. It includes the latest frontend automation technology with TypeScript and Playwright. The project features: Automated reports, Page Object Model, AI usage, and Test case documentation.
                             </p>
                             <div class="flex gap-2 mb-4">
                                 <span
@@ -511,7 +429,7 @@
                                         d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                                         fill-rule="evenodd"></path>
                                 </svg>
-                                Ver En GitHub
+                                <span data-i18n="proj_btn_github">View on GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -519,19 +437,12 @@
                         class="bg-white dark:bg-card-dark p-5 rounded-xl border border-slate-200 dark:border-white/10 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all flex flex-col h-full hover:border-primary/30">
                         <div>
                             <div class="flex justify-between items-start">
-                                <h3 class="font-bold text-slate-900 dark:text-white">System Info Grabber </h3>
+                                <h3 data-i18n="proj2_title" class="font-bold text-slate-900 dark:text-white">System Info Grabber </h3>
                                 <span
                                     class="material-symbols-outlined text-slate-400 dark:text-text-muted text-[20px]">open_in_new</span>
                             </div>
-                            <p class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
-                                Proyecto de aplicación de escritorio desarrollada en Python que recopila y muestra
-                                información detallada del
-                                sistema operativo y hardware del equipo donde se ejecuta. La aplicación utiliza la
-                                biblioteca CustomTkinter para
-                                la interfaz gráfica, ofreciendo una experiencia de usuario moderna y atractiva.
-                                Además, se empaqueta como un ejecutable independiente utilizando PyInstaller,
-                                facilitando su distribución
-                                e instalación en otros sistemas sin necesidad de tener Python instalado.
+                            <p data-i18n="proj2_desc" class="text-sm text-slate-600 dark:text-text-muted mt-2 mb-4">
+                                Desktop application project developed in Python that collects and displays detailed information about the operating system and hardware of the computer where it runs. The application uses the CustomTkinter library for the graphical interface, providing a modern and attractive user experience. Furthermore, it is packaged as a standalone executable using PyInstaller, making it easy to distribute and install on other systems without needing Python installed.
                             </p>
                             <div class="flex gap-2 mb-4">
                                 <span
@@ -554,7 +465,7 @@
                                         d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
                                         fill-rule="evenodd"></path>
                                 </svg>
-                                Ver En GitHub
+                                <span data-i18n="proj_btn_github">View on GitHub</span>
                             </a>
                         </div>
                     </div>
@@ -570,26 +481,22 @@
                                 fill-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Descubre mi GitHub</h2>
-                    <p class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
-                        Tecnologías, proyectos personales, experimentos, colaboraciones con otros developers, proyectos
-                        académicos y mucho más. Animate a dar un vistazo a mi perfil, ya sea para evaluarlo o tomar
-                        inspiración de él.
+                    <h2 data-i18n="github_more_title" class="text-xl font-bold text-slate-900 dark:text-white mb-2">Discover my GitHub</h2>
+                    <p data-i18n="github_more_desc" class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
+                        Technologies, personal projects, experiments, collaborations with other developers, academic projects, and much more. Feel free to take a look at my profile, whether to evaluate it or draw inspiration from it.
                     </p>
-                    <a class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-primary dark:hover:bg-cyan-300 text-white dark:text-black px-6 py-3 rounded-full text-sm font-bold transition shadow-lg shadow-slate-200 dark:shadow-primary/25 w-full sm:w-auto"
+                    <a data-i18n="github_more_btn" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-primary dark:hover:bg-cyan-300 text-white dark:text-black px-6 py-3 rounded-full text-sm font-bold transition shadow-lg shadow-slate-200 dark:shadow-primary/25 w-full sm:w-auto"
                         href="https://github.com/NoMeCompila" target="_blank">
-                        Ver Perfil De GitHub
+                        View GitHub Profile
                     </a>
                 </div>
             </section>
             <section class="px-6 py-12 max-w-2xl mx-auto">
                 <div
                     class="bg-primary/5 dark:bg-white/5 rounded-2xl p-6 flex flex-col items-center text-center border border-transparent dark:border-white/10">
-                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Contáctame</h2>
-                    <p class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
-                        Actualmente estoy abierto a nuevas oportunidades laborales incluso como freelance para un
-                        proyecto particular ya sea como QA Automation,
-                        QA Funcional o Performance Tseter. Si deseas contactarme, no dudes en hacerlo.
+                    <h2 data-i18n="contact_title" class="text-xl font-bold text-slate-900 dark:text-white mb-2">Contact me</h2>
+                    <p data-i18n="contact_desc" class="text-slate-600 dark:text-text-muted text-sm mb-6 max-w-xs">
+                        I am currently open to new job opportunities, including freelancing for specific projects as a QA Automation, QA Functional, or Performance Tester. If you wish to contact me, don't hesitate to do so.
                     </p>
                     <a class="flex items-center gap-2 text-primary font-bold hover:underline"
                         href="mailto:cabafer1@gmail.com">
@@ -618,30 +525,34 @@
                     </div>
                 </div>
             </section>
-<footer class="w-full bg-slate-50 dark:bg-[#181818] border-t border-slate-200 dark:border-white/5 mt-auto transition-colors duration-300">
-    <div class="px-6 py-10 max-w-2xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <p class="text-sm font-bold text-slate-800 dark:text-slate-200">
-                    Fernando Caballero © 2026
-                </p>
-                <p class="text-xs text-slate-500 dark:text-text-muted mt-1">
-                    Especialista en QA Automation & Python Scripting
-                </p>
-            </div>
-            
-            <div class="flex items-center gap-2 px-3 py-1.5 bg-white/50 dark:bg-white/5 rounded-full border border-slate-200 dark:border-white/10">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                </span>
-                <p class="text-[10px] text-slate-600 dark:text-text-muted uppercase tracking-wider font-semibold">
-                    From 🇦🇷 Corrientes to the world 🌎
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+            <footer
+                class="w-full bg-slate-50 dark:bg-[#181818] border-t border-slate-200 dark:border-white/5 mt-auto transition-colors duration-300">
+                <div class="px-6 py-10 max-w-2xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="text-center md:text-left">
+                            <p data-i18n="footer_rights" class="text-sm font-bold text-slate-800 dark:text-slate-200">
+                                Fernando Caballero © 2026
+                            </p>
+                            <p data-i18n="footer_spec" class="text-xs text-slate-500 dark:text-text-muted mt-1">
+                                QA Automation & Python Scripting Specialist
+                            </p>
+                        </div>
+
+                        <div
+                            class="flex items-center gap-2 px-3 py-1.5 bg-white/50 dark:bg-white/5 rounded-full border border-slate-200 dark:border-white/10">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            <p data-i18n="footer_from" 
+                                class="text-[10px] text-slate-600 dark:text-text-muted uppercase tracking-wider font-semibold">
+                                From 🇦🇷 Corrientes to the world 🌎
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
     </div>
 
     </main>
