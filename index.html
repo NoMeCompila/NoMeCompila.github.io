@@ -18,6 +18,7 @@
     <script src="tailwind.config.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="lang.js"></script>
+    <script src="theme.js"></script>
 </head>
 
 <body
@@ -78,6 +79,15 @@
                 <button id="btn-lang-en" class="w-8 h-8 rounded-full bg-primary text-black font-bold text-[10px] flex items-center justify-center shadow-sm transition-all hover:scale-110">EN</button>
                 <div class="w-4 h-[1px] bg-slate-200 dark:bg-white/10"></div>
                 <button id="btn-lang-es" class="w-8 h-8 rounded-full text-text-muted font-bold text-[10px] flex items-center justify-center transition-all hover:text-primary hover:scale-110">ES</button>
+                
+                <div class="w-8 h-[1px] bg-slate-200 dark:bg-white/10 my-2"></div>
+                
+                <button id="btn-theme-light" class="w-8 h-8 rounded-full text-text-muted flex items-center justify-center transition-all hover:text-primary hover:scale-110" title="Light Mode">
+                    <span class="material-symbols-outlined text-[18px]">light_mode</span>
+                </button>
+                <button id="btn-theme-dark" class="w-8 h-8 rounded-full bg-primary text-black flex items-center justify-center shadow-sm transition-all hover:scale-110" title="Dark Mode">
+                    <span class="material-symbols-outlined text-[18px]">dark_mode</span>
+                </button>
             </div>
         </nav>
         <main class="flex-1 h-full overflow-y-auto scroll-smooth flex flex-col">

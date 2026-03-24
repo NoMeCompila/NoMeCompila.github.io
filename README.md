@@ -29,8 +29,9 @@ The development of this portfolio was driven by several core technical and desig
 2. **Responsive & Mobile-First Design**
    - Utilizing Tailwind CSS grid and flexbox utilities to ensure the layout adapts seamlessly to any screen size, from mobile phones to wide desktop monitors.
 
-3. **Dark Mode Architecture**
-   - The UI is meticulously designed using Tailwind's `dark:` classes everywhere throughout the document, providing a built-in dark mode aesthetic that reduces eye strain and looks sleek.
+3. **Dark/Light Mode Theme Toggle**
+   - The UI features a fully integrated Dark and Light mode toggle. It is built natively with Tailwind's `dark:` classes ensuring a sleek Dark aesthetic by default, while supporting a clean Light Mode triggered via a sidebar switch.
+   - The visual preference is automatically saved via a custom Vanilla JS script (`theme.js`) using `localStorage`.
 
 4. **AI-Assisted Development**
    - Embracing an AI-First mindset, the development workflow was accelerated and optimized using AI coding assistants to generate boilerplate, refactor logic, implement features, and translate text efficiently.
