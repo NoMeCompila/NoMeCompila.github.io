@@ -18,7 +18,12 @@ const translations = {
         "skills_vcs": "Version Control",
         "skills_pm": "Project Management",
         "exp_title": "Experience",
-        
+        "companies_title": "Companies where I added value",
+        "skills_api": "API Testing",
+        "skills_db": "Database Testing",
+        "skills_webui": "Web UI Testing",
+        "skills_ai": "AI Tools",
+
         "exp1_role": "QA Automation | QA functional Analyst",
         "exp1_date": "Globant • Johnson & Johnson | Full Time • Full Remote | Oct 2025 - Present",
         "exp1_highlight": "<strong>Main achievement:</strong> Joined a 100% English-speaking team where I ensure quality processes in the migration of the cardiovascular device management system across multiple platforms and devices.",
@@ -65,7 +70,7 @@ const translations = {
         "proj1_title": "E-commerce Full Test Automation",
         "proj1_desc": "End-to-end test automation project for an e-commerce platform, where I tested my skills in adopting new technologies. It includes the latest frontend automation technology with TypeScript and Playwright. The project features: Automated reports, Page Object Model, AI usage, and Test case documentation.",
         "proj_btn_github": "View on GitHub",
-        
+
         "proj2_title": "System Info Grabber",
         "proj2_desc": "Desktop application project developed in Python that collects and displays detailed information about the operating system and hardware of the computer where it runs. The application uses the CustomTkinter library for the graphical interface, providing a modern and attractive user experience. Furthermore, it is packaged as a standalone executable using PyInstaller, making it easy to distribute and install on other systems without needing Python installed.",
 
@@ -75,7 +80,7 @@ const translations = {
 
         "contact_title": "Contact me",
         "contact_desc": "I am currently open to new job opportunities, including freelancing for specific projects as a QA Automation, QA Functional, or Performance Tester. If you wish to contact me, don't hesitate to do so.",
-        
+
         "footer_rights": "Fernando Caballero © 2026",
         "footer_spec": "QA Automation & Python Scripting Specialist",
         "footer_from": "From 🇦🇷 Corrientes to the world 🌎"
@@ -90,11 +95,16 @@ const translations = {
         "about_desc": "QA Automation Engineer con 4 años de experiencia y con mentalidad AI-First centrado en asegurar la calidad durante todo el ciclo de vida de desarrollo de software mediante la implementación de frameworks de automatización robustos y escalables con cultura de aprendizaje continuo y con personalidad colaborativa. con experiencia en negocio de Banca y Healthcare.",
         "btn_contact": "Contáctame",
         "btn_cv": "CV | Resume",
-        "skills_title": "Technical Skills",
+        "skills_title": "Habilidades Técnicas",
         "skills_vcs": "Control de Versiones",
         "skills_pm": "Gestión de Proyectos",
-        "exp_title": "Experience",
-        
+        "exp_title": "Experiencia",
+        "companies_title": "Empresas en las que aporté valor",
+        "skills_api": "Testing de APIs",
+        "skills_db": "Testing de Bases de Datos",
+        "skills_webui": "Testing de UI Web",
+        "skills_ai": "Herramientas de IA",
+
         "exp1_role": "QA Automation | QA functional Analyst",
         "exp1_date": "Globant • Johnson & Johnson | Full Time • Full Remote | Oct 2025 - Actualidad",
         "exp1_highlight": "<strong>Logro principal:</strong> Incorporación a un equipo 100% de habla inglesa donde aseguro los procesos de calidad en la migración del sistema de administración de dispositivos cardiovasculares en múltiples plataformas y dispositivos.",
@@ -144,14 +154,14 @@ const translations = {
 
         "proj2_title": "System Info Grabber",
         "proj2_desc": "Proyecto de aplicación de escritorio desarrollada en Python que recopila y muestra información detallada del sistema operativo y hardware del equipo donde se ejecuta. La aplicación utiliza la biblioteca CustomTkinter para la interfaz gráfica, ofreciendo una experiencia de usuario moderna y atractiva. Además, se empaqueta como un ejecutable independiente utilizando PyInstaller, facilitando su distribución e instalación en otros sistemas sin necesidad de tener Python instalado.",
-        
+
         "github_more_title": "Descubre mi GitHub",
         "github_more_desc": "Tecnologías, proyectos personales, experimentos, colaboraciones con otros developers, proyectos académicos y mucho más. Animate a dar un vistazo a mi perfil, ya sea para evaluarlo o tomar inspiración de él.",
         "github_more_btn": "Ver Perfil De GitHub",
 
         "contact_title": "Contáctame",
         "contact_desc": "Actualmente estoy abierto a nuevas oportunidades laborales incluso como freelance para un proyecto particular ya sea como QA Automation, QA Funcional o Performance Tseter. Si deseas contactarme, no dudes en hacerlo.",
-        
+
         "footer_rights": "Fernando Caballero © 2026",
         "footer_spec": "Especialista en QA Automation & Python Scripting",
         "footer_from": "From 🇦🇷 Corrientes to the world 🌎"
@@ -173,27 +183,27 @@ function setLanguage(lang) {
     // 1. Actualizamos la variable global y guardamos la preferencia en el navegador
     currentLang = lang;
     localStorage.setItem("preferredLanguage", lang);
-    
+
     // 2. Actualizamos el aspecto visual de los botones (cuál está activo)
     updateToggleUI(lang);
 
     // 3. Buscamos TODOS los elementos en el HTML que tengan el atributo `data-i18n`
     const elements = document.querySelectorAll("[data-i18n]");
-    
+
     // 4. Recorremos cada elemento encontrado para actualizar su texto
     elements.forEach(element => {
         // Obtenemos la clave de traducción (ej. "nav_about")
         const key = element.getAttribute("data-i18n");
-        
+
         // Verificamos si existe la traducción para ese idioma y esa clave específica
         if (translations[currentLang] && translations[currentLang][key]) {
             // Si el texto actual o la nueva traducción contienen etiquetas HTML (como <strong> o <br>)
             // usamos innerHTML para renderizar el HTML correctamente. 
             // Si es solo texto plano, usamos textContent que es más rápido y seguro.
             if (element.innerHTML.includes('<') || translations[currentLang][key].includes('<')) {
-                 element.innerHTML = translations[currentLang][key];
+                element.innerHTML = translations[currentLang][key];
             } else {
-                 element.textContent = translations[currentLang][key];
+                element.textContent = translations[currentLang][key];
             }
         }
     });
@@ -210,15 +220,15 @@ function setLanguage(lang) {
 function updateToggleUI(lang) {
     const enBtn = document.getElementById("btn-lang-en");
     const esBtn = document.getElementById("btn-lang-es");
-    
+
     // Si los botones no existen en la página, no hacemos nada
-    if(!enBtn || !esBtn) return;
+    if (!enBtn || !esBtn) return;
 
     if (lang === "en") {
         // Estilos para botón INGLÉS activo
         enBtn.classList.add("bg-primary", "text-black");
         enBtn.classList.remove("text-text-muted", "hover:text-primary");
-        
+
         // Estilos para botón ESPAÑOL inactivo
         esBtn.classList.remove("bg-primary", "text-black");
         esBtn.classList.add("text-text-muted", "hover:text-primary");
@@ -226,7 +236,7 @@ function updateToggleUI(lang) {
         // Estilos para botón ESPAÑOL activo
         esBtn.classList.add("bg-primary", "text-black");
         esBtn.classList.remove("text-text-muted", "hover:text-primary");
-        
+
         // Estilos para botón INGLÉS inactivo
         enBtn.classList.remove("bg-primary", "text-black");
         enBtn.classList.add("text-text-muted", "hover:text-primary");
@@ -249,11 +259,11 @@ function toggleLanguage() {
 document.addEventListener("DOMContentLoaded", () => {
     // Aplicamos el idioma inicial (el preferido guardado o el de por defecto)
     setLanguage(currentLang);
-    
+
     // Obtenemos los botones del DOM
     const enBtn = document.getElementById("btn-lang-en");
     const esBtn = document.getElementById("btn-lang-es");
-    
+
     // Les asignamos la función setLanguage a su evento "click"
     if (enBtn) enBtn.addEventListener("click", () => setLanguage("en"));
     if (esBtn) esBtn.addEventListener("click", () => setLanguage("es"));
